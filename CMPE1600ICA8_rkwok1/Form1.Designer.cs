@@ -62,6 +62,7 @@
             this.UI_Button_LongestRun.TabIndex = 1;
             this.UI_Button_LongestRun.Text = "Longest Run";
             this.UI_Button_LongestRun.UseVisualStyleBackColor = true;
+            this.UI_Button_LongestRun.Click += new System.EventHandler(this.UI_Button_LongestRun_Click);
             // 
             // UI_Button_NumberOfOnes
             // 

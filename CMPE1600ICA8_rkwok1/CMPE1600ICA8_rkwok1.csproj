@@ -58,6 +58,12 @@
     <Compile Include="LongestRun.Designer.cs">
       <DependentUpon>LongestRun.cs</DependentUpon>
     </Compile>
+    <Compile Include="NumberOfRuns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NumberOfRuns.Designer.cs">
+      <DependentUpon>NumberOfRuns.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LongestRun.resx">
       <DependentUpon>LongestRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumberOfRuns.resx">
+      <DependentUpon>NumberOfRuns.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

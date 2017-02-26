@@ -7,3 +7,5 @@ C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE16
 C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.csproj.GenerateResource.Cache
 C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.exe
 C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.pdb
+C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.LongestRun.resources
+C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.NumberOfRuns.resources

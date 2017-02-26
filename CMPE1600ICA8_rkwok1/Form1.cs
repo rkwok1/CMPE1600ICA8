@@ -18,6 +18,7 @@ namespace CMPE1600ICA8_rkwok1
     {
         //Global Variables
         List<byte> byteList = new List<byte>();
+        bool checkOnes = false;
         public Form1()
         {
             InitializeComponent();
@@ -32,6 +33,17 @@ namespace CMPE1600ICA8_rkwok1
             UI_Label_FileLength0.Text = length.ToString();
             numOnes = CountOnes(); //Gets number of ones in file
             UI_Label_NumberOfOnes0.Text = numOnes.ToString();
+        }
+        //When user clicks on LongestRun Button, opens dialog
+        private void UI_Button_LongestRun_Click(object sender, EventArgs e)
+        {
+            //Shows user dialog for longest run
+            LongestRun lrDialog = new LongestRun();
+            lrDialog.ShowDialog();
+            if(DialogResult.OK == lrDialog.ShowDialog())
+            {
+                checkOnes =  
+            }
         }
         ////////////////////////////////////////Methods\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         public void OpenFile()
@@ -95,6 +107,8 @@ namespace CMPE1600ICA8_rkwok1
             }
             return counter;
         }
+
+        
     }
 
 }

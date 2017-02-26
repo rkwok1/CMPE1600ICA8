@@ -74,6 +74,7 @@
             this.UI_Button_Dialog_OK.TabIndex = 3;
             this.UI_Button_Dialog_OK.Text = "OK";
             this.UI_Button_Dialog_OK.UseVisualStyleBackColor = true;
+            this.UI_Button_Dialog_OK.Click += new System.EventHandler(this.UI_Button_Dialog_OK_Click);
             // 
             // UI_Button_Dialog_Cancel
             // 
@@ -83,6 +84,7 @@
             this.UI_Button_Dialog_Cancel.TabIndex = 4;
             this.UI_Button_Dialog_Cancel.Text = "Cancel";
             this.UI_Button_Dialog_Cancel.UseVisualStyleBackColor = true;
+            this.UI_Button_Dialog_Cancel.Click += new System.EventHandler(this.UI_Button_Dialog_Cancel_Click);
             // 
             // LongestRun
             // 
