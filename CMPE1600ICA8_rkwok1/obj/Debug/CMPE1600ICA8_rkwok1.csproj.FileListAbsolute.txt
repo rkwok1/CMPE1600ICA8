@@ -1,0 +1,9 @@
+C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\bin\Debug\CMPE1600ICA8_rkwok1.exe.config
+C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\bin\Debug\CMPE1600ICA8_rkwok1.exe
+C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\bin\Debug\CMPE1600ICA8_rkwok1.pdb
+C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.Form1.resources
+C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.Properties.Resources.resources
+C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.csproj.GenerateResource.Cache
+C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.exe
+C:\Users\Ryan\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.pdb
