@@ -60,6 +60,7 @@
             0,
             0,
             0});
+            this.UI_NumUD_Dialog_OnesRunLength.ValueChanged += new System.EventHandler(this.UI_NumUD_Dialog_OnesRunLength_ValueChanged);
             // 
             // UI_Button_Dialog_OK1
             // 
@@ -69,6 +70,7 @@
             this.UI_Button_Dialog_OK1.TabIndex = 2;
             this.UI_Button_Dialog_OK1.Text = "OK";
             this.UI_Button_Dialog_OK1.UseVisualStyleBackColor = true;
+            this.UI_Button_Dialog_OK1.Click += new System.EventHandler(this.UI_Button_Dialog_OK1_Click);
             // 
             // UI_Button_Dialog_Cancel1
             // 
@@ -78,6 +80,7 @@
             this.UI_Button_Dialog_Cancel1.TabIndex = 3;
             this.UI_Button_Dialog_Cancel1.Text = "Cancel";
             this.UI_Button_Dialog_Cancel1.UseVisualStyleBackColor = true;
+            this.UI_Button_Dialog_Cancel1.Click += new System.EventHandler(this.UI_Button_Dialog_Cancel1_Click);
             // 
             // NumberOfRuns
             // 

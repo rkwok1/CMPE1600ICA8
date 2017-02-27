@@ -14,12 +14,13 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace CMPE1600ICA8_rkwok1
 {
 
-    public partial class Form1 : Form
+    public partial class UI_MainForm : Form
     {
         //Global Variables
         List<byte> byteList = new List<byte>();
         bool checkOnes = false;
-        public Form1()
+        int numRunsLength = 1;
+        public UI_MainForm()
         {
             InitializeComponent();
         }
@@ -34,18 +35,44 @@ namespace CMPE1600ICA8_rkwok1
             numOnes = CountOnes(); //Gets number of ones in file
             UI_Label_NumberOfOnes0.Text = numOnes.ToString();
         }
-        //When user clicks on LongestRun Button, opens dialog
+        //If user clicks on LongestRun Button, opens dialog
         private void UI_Button_LongestRun_Click(object sender, EventArgs e)
         {
             //Shows user dialog for longest run
             LongestRun lrDialog = new LongestRun();
-            lrDialog.ShowDialog();
-            if(DialogResult.OK == lrDialog.ShowDialog())
+            if (DialogResult.OK == lrDialog.ShowDialog())
             {
-                checkOnes =  
+                checkOnes = lrDialog.useOnes;
+                if (checkOnes == true)
+                {
+                    UI_Label_LongestRunZeros.Text = "Longest Run of Ones: ";
+                    //Method to check longest run of ones
+                }
+                else if (checkOnes == false)
+                {
+                    UI_Label_LongestRunZeros.Text = "Longest Run of Zeros: ";
+                    //Method to check longest run of zeros
+                }
+            }
+        }
+        //If user clicks number of ones button, opens dialog and asks for length of ones
+        private void UI_Button_NumberOfOnes_Click(object sender, EventArgs e)
+        {
+            NumberOfRuns nrDialog = new NumberOfRuns();
+            if (DialogResult.OK == nrDialog.ShowDialog())
+            {
+                numRunsLength = nrDialog.pRunLength;
+                UI_Label_RunsOfLength.Text = ("Runs of Length" + " " + numRunsLength + ": ");
+                //Method to check the number of runs equivalent in length to above value;
+            }
+            else
+            {
+                //Do nothing
             }
         }
         ////////////////////////////////////////Methods\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+        //Attempts to open pre-existing binary file of type dat/bin
         public void OpenFile()
         {
             string sFileName = null; //Holds safe file name
@@ -62,7 +89,7 @@ namespace CMPE1600ICA8_rkwok1
 
                     FileStream fs = new FileStream(sFileName, FileMode.Open, FileAccess.Read);
                     BinaryFormatter bf = new BinaryFormatter();
-                    List<byte>byteList = (List<byte>)bf.Deserialize(fs);
+                    byteList = (List<byte>)bf.Deserialize(fs);
                     fs.Close();
 
                 }
@@ -70,12 +97,7 @@ namespace CMPE1600ICA8_rkwok1
                 {
                     MessageBox.Show(e.Message, "Opening File", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
             }
-
-
-
         }
         //Counts Length of File in bytes
         public int CountLength()
@@ -95,20 +117,39 @@ namespace CMPE1600ICA8_rkwok1
             {
                 for (int i = 0; i < byteList.Count; i++)
                 {
-                    if((byteList[i] & 1 << i) > 0)
+                    if ((byteList[i] & 1 << i) > 0)
                     {
                         counter++;
                     }
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message, "Counting Ones", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return counter;
         }
 
-        
+        //Method to determine Longest Run based on state of checkOnes
+        public void CheckRun()
+        {
+            //If user has selected zeros, and state of checkOnes is false
+            if(checkOnes == false)
+            {
+                //Determine longest run of zeros
+            }
+            //else if user has selected ones, and stat of checkOnes is true
+            else if( checkOnes == true)
+            {
+                //Determine longest run of ones
+            }
+        }
+
+        //Method to determine number of runs of length equal to numRunsLength
+        public void RunLengthCheck()
+        {
+
+        }
     }
 
 }

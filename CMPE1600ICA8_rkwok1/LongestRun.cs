@@ -13,7 +13,14 @@ namespace CMPE1600ICA8_rkwok1
     public partial class LongestRun : Form
     {
         //Global variables
-        bool runSet = false;
+       public bool useOnes = false;
+        public bool pOnes
+        {
+            get
+            {
+                return (useOnes);
+            }
+        }
         public LongestRun()
         {
             InitializeComponent();
@@ -28,6 +35,16 @@ namespace CMPE1600ICA8_rkwok1
         {
             DialogResult = System.Windows.Forms.DialogResult.OK;
             
+        }
+        //If user clicks zero radio button, then bool for checking ones is set to false
+        private void UI_RadioButton_Dialog_Zeros_CheckedChanged(object sender, EventArgs e)
+        {
+            useOnes = false;
+        }
+        //If user clicks one radio button, then bool for checking ones is set to true
+        private void UI_RadioButton_Dialog_Ones_CheckedChanged(object sender, EventArgs e)
+        {
+            useOnes = true;
         }
     }
 }

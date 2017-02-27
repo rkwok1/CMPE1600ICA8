@@ -1,6 +1,6 @@
 ﻿namespace CMPE1600ICA8_rkwok1
 {
-    partial class Form1
+    partial class UI_MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -72,6 +72,7 @@
             this.UI_Button_NumberOfOnes.TabIndex = 2;
             this.UI_Button_NumberOfOnes.Text = "Number of Ones";
             this.UI_Button_NumberOfOnes.UseVisualStyleBackColor = true;
+            this.UI_Button_NumberOfOnes.Click += new System.EventHandler(this.UI_Button_NumberOfOnes_Click);
             // 
             // UI_Label_FileName
             // 
@@ -116,7 +117,7 @@
             this.UI_Label_RunsOfLength.Name = "UI_Label_RunsOfLength";
             this.UI_Label_RunsOfLength.Size = new System.Drawing.Size(92, 13);
             this.UI_Label_RunsOfLength.TabIndex = 7;
-            this.UI_Label_RunsOfLength.Text = "Runs of Length 8:";
+            this.UI_Label_RunsOfLength.Text = "Runs of Length 1:";
             // 
             // UI_Label_FileName0
             // 
@@ -168,7 +169,7 @@
             this.UI_openFileDialog1.FileName = "openFileDialog1";
             this.UI_openFileDialog1.Filter = "*.dat||*.bin||*.*|";
             // 
-            // Form1
+            // UI_MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,8 +187,8 @@
             this.Controls.Add(this.UI_Button_NumberOfOnes);
             this.Controls.Add(this.UI_Button_LongestRun);
             this.Controls.Add(this.UI_Button_LoadFile);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "UI_MainForm";
+            this.Text = "ICA 8";
             this.ResumeLayout(false);
             this.PerformLayout();
 

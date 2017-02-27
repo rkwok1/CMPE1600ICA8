@@ -54,6 +54,7 @@
             this.UI_RadioButton_Dialog_Zeros.TabStop = true;
             this.UI_RadioButton_Dialog_Zeros.Text = "Zeros";
             this.UI_RadioButton_Dialog_Zeros.UseVisualStyleBackColor = true;
+            this.UI_RadioButton_Dialog_Zeros.CheckedChanged += new System.EventHandler(this.UI_RadioButton_Dialog_Zeros_CheckedChanged);
             // 
             // UI_RadioButton_Dialog_Ones
             // 
@@ -65,6 +66,7 @@
             this.UI_RadioButton_Dialog_Ones.TabStop = true;
             this.UI_RadioButton_Dialog_Ones.Text = "Ones";
             this.UI_RadioButton_Dialog_Ones.UseVisualStyleBackColor = true;
+            this.UI_RadioButton_Dialog_Ones.CheckedChanged += new System.EventHandler(this.UI_RadioButton_Dialog_Ones_CheckedChanged);
             // 
             // UI_Button_Dialog_OK
             // 
