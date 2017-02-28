@@ -46,12 +46,12 @@ namespace CMPE1600ICA8_rkwok1
                 if (checkOnes == true)
                 {
                     UI_Label_LongestRunZeros.Text = "Longest Run of Ones: ";
-                    //Method to check longest run of ones
+                    UI_Label_LongestRunOfZeros0.Text = CheckRun().ToString();
                 }
                 else if (checkOnes == false)
                 {
                     UI_Label_LongestRunZeros.Text = "Longest Run of Zeros: ";
-                    //Method to check longest run of zeros
+                    UI_Label_LongestRunOfZeros0.Text = CheckRun().ToString();
                 }
             }
         }
@@ -88,8 +88,11 @@ namespace CMPE1600ICA8_rkwok1
                 {
 
                     FileStream fs = new FileStream(sFileName, FileMode.Open, FileAccess.Read);
-                    BinaryFormatter bf = new BinaryFormatter();
-                    byteList = (List<byte>)bf.Deserialize(fs);
+                    BinaryReader bf = new BinaryReader(fs);
+                    for (int i = 0; i < fs.Length; i++)
+                    {
+                        byteList.Add(bf.ReadByte());
+                    }
                     fs.Close();
 
                 }
@@ -115,11 +118,14 @@ namespace CMPE1600ICA8_rkwok1
             int counter = 0;
             try
             {
-                for (int i = 0; i < byteList.Count; i++)
+                foreach (byte b in byteList)
                 {
-                    if ((byteList[i] & 1 << i) > 0)
+                    for (int i = 0; i < 8; i++)
                     {
-                        counter++;
+                        if ((b & (1 << i)) > 1)
+                        {
+                            counter++;
+                        }
                     }
                 }
             }
@@ -131,18 +137,61 @@ namespace CMPE1600ICA8_rkwok1
         }
 
         //Method to determine Longest Run based on state of checkOnes
-        public void CheckRun()
+        public int CheckRun()
         {
+            bool gapState = false;
+            bool runState = false;
+            int counter = 0;
+            int longestRun = 0;
             //If user has selected zeros, and state of checkOnes is false
-            if(checkOnes == false)
+            if (checkOnes == false)
             {
-                //Determine longest run of zeros
+                foreach (byte b in byteList)
+                {
+                    for (int i = 0; i < 8; i++)
+                    {
+                        if (((b & (1 << i)) == 0) && gapState == false)
+                        {
+                            gapState = true;
+                            counter++;
+                        }
+                        else if (!((b & (1 << i)) == 0))
+                        {
+                            gapState = false;
+                            counter = 0;
+                        }
+                        if(counter >= longestRun)
+                        {
+                            longestRun = counter;
+                        }
+                    }
+                    
+                }
             }
             //else if user has selected ones, and stat of checkOnes is true
-            else if( checkOnes == true)
+            else if (checkOnes == true)
             {
-                //Determine longest run of ones
+                foreach (byte b in byteList)
+                {
+                    for (int i = 0; i < 8; i++)
+                    {
+                        if (((b & (1 << i)) > 0) && (runState == false))
+                        {
+                            counter++;
+                            runState = true;
+                        }
+                        else if (!((b & (1 << i)) > 1))
+                        {
+                            runState = false;
+                        }
+                        if(counter >= longestRun)
+                        {
+                            longestRun = counter;
+                        }
+                    }
+                }
             }
+            return longestRun;
         }
 
         //Method to determine number of runs of length equal to numRunsLength
