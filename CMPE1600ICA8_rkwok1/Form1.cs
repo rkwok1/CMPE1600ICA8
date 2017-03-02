@@ -122,7 +122,7 @@ namespace CMPE1600ICA8_rkwok1
                 {
                     for (int i = 0; i < 8; i++)
                     {
-                        if ((b & (1 << i)) > 1)
+                        if ((b & (1 << i)) >= 1)
                         {
                             counter++;
                         }
@@ -153,19 +153,28 @@ namespace CMPE1600ICA8_rkwok1
                         if (((b & (1 << i)) == 0) && gapState == false)
                         {
                             gapState = true;
+                                counter++;
+
+                            
+
+                        }
+                        else if (((b & (1 << i)) == 0))
+                        {
                             counter++;
                         }
                         else if (!((b & (1 << i)) == 0))
                         {
+
                             gapState = false;
+                            if (counter > longestRun)
+                            {
+                                longestRun = counter;
+                            }
                             counter = 0;
                         }
-                        if(counter >= longestRun)
-                        {
-                            longestRun = counter;
-                        }
+
                     }
-                    
+
                 }
             }
             //else if user has selected ones, and stat of checkOnes is true
@@ -177,17 +186,25 @@ namespace CMPE1600ICA8_rkwok1
                     {
                         if (((b & (1 << i)) > 0) && (runState == false))
                         {
-                            counter++;
                             runState = true;
+       
+                                counter++;
+
                         }
-                        else if (!((b & (1 << i)) > 1))
+                        else if (((b & (1 << i)) > 0))
+                        {
+                            counter++;
+                        }
+                        else if (((b & (1 << i)) == 0))
                         {
                             runState = false;
+                            if (counter > longestRun)
+                            {
+                                longestRun = counter;
+                            }
+                            counter = 0;
                         }
-                        if(counter >= longestRun)
-                        {
-                            longestRun = counter;
-                        }
+
                     }
                 }
             }
@@ -197,6 +214,12 @@ namespace CMPE1600ICA8_rkwok1
         //Method to determine number of runs of length equal to numRunsLength
         public void RunLengthCheck()
         {
+            int counter = 0;
+            int runsOf = 0;
+            foreach (byte b in byteList)
+            {
+
+            }
 
         }
     }

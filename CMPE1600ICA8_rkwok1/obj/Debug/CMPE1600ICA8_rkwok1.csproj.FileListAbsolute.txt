@@ -20,3 +20,14 @@ C:\Users\rkwok2\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE
 C:\Users\rkwok2\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.NumberOfRuns.resources
 C:\Users\rkwok2\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.Properties.Resources.resources
 C:\Users\rkwok2\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.csproj.GenerateResource.Cache
+C:\Users\rkwok1\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\bin\Debug\CMPE1600ICA8_rkwok1.exe.config
+C:\Users\rkwok1\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.exe
+C:\Users\rkwok1\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.pdb
+C:\Users\rkwok1\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\bin\Debug\CMPE1600ICA8_rkwok1.exe
+C:\Users\rkwok1\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\bin\Debug\CMPE1600ICA8_rkwok1.pdb
+C:\Users\rkwok1\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.csprojResolveAssemblyReference.cache
+C:\Users\rkwok1\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.UI_MainForm.resources
+C:\Users\rkwok1\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.LongestRun.resources
+C:\Users\rkwok1\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.NumberOfRuns.resources
+C:\Users\rkwok1\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.Properties.Resources.resources
+C:\Users\rkwok1\Documents\GitHub\CMPE1600ICA8\CMPE1600ICA8_rkwok1\obj\Debug\CMPE1600ICA8_rkwok1.csproj.GenerateResource.Cache
