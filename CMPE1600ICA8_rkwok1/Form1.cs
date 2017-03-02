@@ -20,6 +20,7 @@ namespace CMPE1600ICA8_rkwok1
         List<byte> byteList = new List<byte>();
         bool checkOnes = false;
         int numRunsLength = 1;
+        int numOfRunswithLength = 0;
         public UI_MainForm()
         {
             InitializeComponent();
@@ -63,7 +64,9 @@ namespace CMPE1600ICA8_rkwok1
             {
                 numRunsLength = nrDialog.pRunLength;
                 UI_Label_RunsOfLength.Text = ("Runs of Length" + " " + numRunsLength + ": ");
-                //Method to check the number of runs equivalent in length to above value;
+                numOfRunswithLength = RunLengthCheck();
+                UI_Label_RunOfLength0.Text = numOfRunswithLength.ToString();
+               
             }
             else
             {
@@ -153,9 +156,9 @@ namespace CMPE1600ICA8_rkwok1
                         if (((b & (1 << i)) == 0) && gapState == false)
                         {
                             gapState = true;
-                                counter++;
+                            counter++;
 
-                            
+
 
                         }
                         else if (((b & (1 << i)) == 0))
@@ -187,8 +190,8 @@ namespace CMPE1600ICA8_rkwok1
                         if (((b & (1 << i)) > 0) && (runState == false))
                         {
                             runState = true;
-       
-                                counter++;
+
+                            counter++;
 
                         }
                         else if (((b & (1 << i)) > 0))
@@ -212,16 +215,39 @@ namespace CMPE1600ICA8_rkwok1
         }
 
         //Method to determine number of runs of length equal to numRunsLength
-        public void RunLengthCheck()
+        public int RunLengthCheck()
         {
             int counter = 0;
-            int runsOf = 0;
+            int numRuns = 0;
+            int maxLength = numRunsLength;
+            bool runState = false;
             foreach (byte b in byteList)
             {
+                for (int i = 0; i < 8; i++)
+                {
+                    if (((b & (1 << i)) > 0) && (runState == false))
+                    {
+                        runState = true;
+                        counter++;
+                        if (counter == maxLength)
+                        {
+                            counter = 0;
+                            numRuns++;
+                        }
+                    }
+                    else if (((b & (1 << i)) == 0))
+                    {
+                        runState = false;
+                        counter = 0;
+                    }
+
+
+
+                }
 
             }
-
+            return numRuns;
         }
-    }
 
+    }
 }
