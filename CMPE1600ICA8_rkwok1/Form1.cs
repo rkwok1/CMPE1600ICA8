@@ -60,7 +60,7 @@ namespace CMPE1600ICA8_rkwok1
         private void UI_Button_NumberOfOnes_Click(object sender, EventArgs e)
         {
             NumberOfRuns nrDialog = new NumberOfRuns();
-            if (DialogResult.OK == nrDialog.ShowDialog())
+            if (DialogResult.OK == nrDialog.ShowDialog() && byteList != null)
             {
                 numRunsLength = nrDialog.pRunLength;
                 UI_Label_RunsOfLength.Text = ("Runs of Length" + " " + numRunsLength + ": ");
@@ -219,32 +219,29 @@ namespace CMPE1600ICA8_rkwok1
         {
             int counter = 0;
             int numRuns = 0;
-            int maxLength = numRunsLength;
-            bool runState = false;
-            foreach (byte b in byteList)
+            int tempHolder = 0;
+            foreach(byte b in byteList)
             {
-                for (int i = 0; i < 8; i++)
+                byte byteHolder = b;
+                for (int i = 0; i < 9; i++)
                 {
-                    if (((b & (1 << i)) > 0) && (runState == false))
+
+                    if((byteHolder & 1) == 1)
                     {
-                        runState = true;
                         counter++;
-                        if (counter == maxLength)
+                        tempHolder++;
+                    }
+                    else
+                    {
+                        counter = 0;
+                        if(tempHolder == numRunsLength)
                         {
-                            counter = 0;
                             numRuns++;
                         }
+                        tempHolder = 0;
                     }
-                    else if (((b & (1 << i)) == 0))
-                    {
-                        runState = false;
-                        counter = 0;
-                    }
-
-
-
+                    byteHolder >>= 1;
                 }
-
             }
             return numRuns;
         }
